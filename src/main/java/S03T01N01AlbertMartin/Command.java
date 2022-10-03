@@ -1,27 +1,26 @@
 package S03T01N01AlbertMartin;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Command {
 
-public class Comand{
+    private int position;
+    private String commandText;
 
-    private List comands = null;
-
-   // public Comand(String s) {
-   // }
-
-    public List getComands () {
-        comands = new ArrayList();
-        Comand c1 = new Comand("Action 1");
-        Comand c2 = new Comand("Action 2");
-        Comand c3 = new Comand("Action 3");
-
-        comands.add(c1);
-        comands.add(c2);
-        comands.add(c3);
-        
-        return  comands;
+    public Command(int position, String commandText) {
+        this.position = position;
+        this.commandText = commandText;
     }
 
+    public int getPosition() {
+        return position;
+    }
 
+    public String getCommandText() {
+        return commandText;
+    }
+
+    @Override
+    public String toString() {
+        return  "[" + position + "]   " +
+                commandText + "\n";
+    }
 }
